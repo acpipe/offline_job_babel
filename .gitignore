@@ -1,0 +1,25 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+#package files
+target
+*.xml.bak
+*.iml
+*.flattened-pom.xml
+.idea
+
+# mac ignore
+.DS_Store
+
+#diff file
+diff*
+*.diff
+*.log
+
+.classpath
+.project
+.settings/
