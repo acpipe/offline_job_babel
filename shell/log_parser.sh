@@ -29,7 +29,7 @@ echo "job work for date:" ${date}
 echo "className:" ${className}
 echo "-------------------job start!-----------------------"
 
-hadoopc3 fs -rm -r -skipTrash ${output_path}
+hadoop fs -rm -r -skipTrash ${output_path}
 
 spark-submit --cluster ${cluster} \
     --master yarn \
