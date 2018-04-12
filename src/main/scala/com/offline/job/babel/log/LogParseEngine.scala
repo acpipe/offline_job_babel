@@ -8,11 +8,18 @@ import collection.JavaConversions._
 object LogParseEngine {
 
     def main(args: Array[String]): Unit = {
-        val Array(className, outputPath, date) = args
-        val params = new ParseParams(className, outputPath, date)
+        val outPutPath = args(0)
+        val date = args(1)
+        val className = args(2)
+
+        Console.println("outPutPath:" + outPutPath)
+        Console.println("date:" + date)
+        Console.println("className:" + className)
+
+        val params = new ParseParams(outPutPath, date, className)
         val sparkSession = SparkSession
             .builder()
-            .appName("LogParseEngine" + params)
+            .appName("LogParseEngine:" + params)
             .getOrCreate()
         val appContext = new ClassPathXmlApplicationContext("applicationContext.xml")
 
